@@ -8,7 +8,8 @@ export const getBooking = async (req: Request, res: Response) => {
     res.status(200).send({
     date: reserva?.date,
     client:reserva?.client.firstName,
-    restaurant: reserva?.restaurant.name
+    restaurant: reserva?.restaurant.name,
+    id:reserva?._id
     });
   } catch (error) {
     res.status(404).send(error.message);

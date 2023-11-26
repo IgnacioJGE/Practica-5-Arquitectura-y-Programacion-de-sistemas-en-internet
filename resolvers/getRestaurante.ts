@@ -9,7 +9,8 @@ export const getRestaurante = async (req: Request, res: Response) => {
     name: restaurante?.name,
     CIF: restaurante?.CIF,
     address: restaurante?.address,
-    bookings: restaurante?.bookings
+    bookings: restaurante?.bookings,
+    id:restaurante?._id
     });
   } catch (error) {
     res.status(404).send(error.message);

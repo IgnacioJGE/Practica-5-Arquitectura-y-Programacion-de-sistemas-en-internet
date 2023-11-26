@@ -12,7 +12,8 @@ export const getCliente = async (req: Request, res: Response) => {
     email: cliente?.email,
     phoneNumber: cliente?.phoneNumber,
     DNI: cliente?.DNI,
-    bookings: cliente?.bookings
+    bookings: cliente?.bookings,
+    id: cliente?._id
     });
   } catch (error) {
     res.status(404).send(error.message);
